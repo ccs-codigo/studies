@@ -1,6 +1,8 @@
 const teste = function teste(cb) {
     console.log("Função teste")
-    cb("fn passado por parametro para cb")
+    if (typeof cb === "function") {
+        cb("fn passado por parametro para cb")
+    }
 }
 
 const fn = function fn(p) {
@@ -9,5 +11,3 @@ const fn = function fn(p) {
 }
 // fn(30)
 teste(fn)
-
- console.log(5%3)
