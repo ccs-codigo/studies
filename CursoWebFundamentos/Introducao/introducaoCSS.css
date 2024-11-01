@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.destaque {
+    background-color: aquamarine;
+    color: #1100ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#title {
+    color: blueviolet;
+}

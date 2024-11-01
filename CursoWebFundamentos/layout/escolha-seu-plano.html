@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body {
+    background-color: #0c1014;
+    color: white;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-title {
+    font-size: 62px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 46px 0;
+}
+
+.header {
+    display: flex;
+    background-color: #05080a;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-left: 16px;
+    letter-spacing: 2px;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    gap: 16px;
+}
+
+.header__nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+.header__nav a:hover {
+    text-decoration: underline;
+}
+
+a.header__nav--active {
+    background-color: #cbe300;
+    color: #0c1014;
+    pointer-events: none;
+}
+
+.pricing {
+    display: flex;
+    gap: 16px;
+}
+
+.pricing-plan {
+    flex: 1;
+    background-color: #1f262c;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px -6px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-plan__title {
+    text-transform: uppercase;
+    border-bottom: 2px solid #cbe300;
+    margin-top: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.pricing-plan p {
+    margin-top: 0;
+}
+
+.pricing-plan__price {
+    font-size: 34px;
+}
+
+.pricing-plan__features {
+    margin: 0 0 35px;
+    color: #b5b5b5;
+    padding-left: 16px;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.pricing-plan__features li::marker {
+    color: #cbe300;
+}
+
+.pricing-plan__cta {
+    text-decoration: none;
+    color: #0c1014;
+    background-color: #cbe300;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.pricing-plan__cta:hover {
+    outline: 2px solid #cbe300;
+    background-color: transparent;
+    color: white;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">MyServer</div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="header__nav--active">Planos</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="main-title">escolha seu plano</h1>
+
+    <section class="pricing">
+        <div class="pricing-plan">
+            <h2 class="class-plan__title">Essencial</h2>
+            <p><span class="pricing-plan__price">R$ 3.95</span> /mês</p>
+            <ul class="pricing-plan__features">
+                <li>1 Website</li>
+                <li>1GB de Armazenamento</li>
+                <li>10GB de transferência</li>
+            </ul>
+            <a class="pricing-plan__cta" href="#">Assine já</a>
+        </div>
+        <div class="pricing-plan">
+            <h2 class="class-plan__title">Premium</h2>
+            <p><span class="pricing-plan__price">R$ 7.95</span> /mês</p>
+            <ul class="pricing-plan__features">
+                <li>1 Website</li>
+                <li>1GB de Armazenamento</li>
+                <li>10GB de transferência</li>
+            </ul>
+            <a  class="pricing-plan__cta" href="#">Assine já</a>
+        </div>
+        <div class="pricing-plan">
+            <h2 class="class-plan__title">Gold</h2>
+            <p><span class="pricing-plan__price">R$ 13.95</span> /mês</p>
+            <ul class="pricing-plan__features">
+                <li>1 Website</li>
+                <li>1GB de Armazenamento</li>
+                <li>10GB de transferência</li>
+            </ul>
+            <a  class="pricing-plan__cta" href="#">Assine já</a>
+        </div>
+    </section>
+
+</body>
+
+</html>

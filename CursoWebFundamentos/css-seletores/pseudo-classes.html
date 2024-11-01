@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+
+        p:empty::before{
+            content:"parágrafo vazio?";
+        }
+
+        a:focus{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button>Vai</button>
+    <br>
+    <button disabled>Vai disabled</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, rerum.</p>
+    <p></p>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minus.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minus.</p>
+    <p tabindex="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minus.</p>
+
+    <form action="#">
+        <input type="text" value="valor inicial"><br><br>
+        <input type="text" value="valor" disabled><br><br>
+        <input type="text" value="valor" readonly><br><br>
+        <input type="text" placeholder="placeholder">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

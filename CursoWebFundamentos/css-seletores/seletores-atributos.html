@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Seletores atributos</title>
+
+    <style>
+
+        a[href="#"]{
+            opacity: .2;
+        }
+
+        a[href^="http"]{
+            color: red;
+        }
+
+        a[href$="pdf"]{
+            color: green;
+        }
+
+        a[target="_blank"]{
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="https://serfrontend.com" target="_blank">Link externo</a></li>
+        <li><a href="pasta/arquivo.pdf">Link para um pdf</a></li>
+        <li><a href="seletores-compostos.html">Link interno</a></li>
+    </ul>
+
+</body>
+
+</html>

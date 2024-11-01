@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de área de circunferência</h1>
+    <label for="raio">Informe o raio da circunferência:
+        <input type="number" id="raio">
+        <br>
+        <button onclick="calcAreaPromptAlert()">Obter por prompt e mostrar no alert</button>
+        <br>
+        <button onclick="calcAreaInputAlert()">Obter input e mostrar alert</button>
+        <br>
+        <button onclick="calcAreaPromptOutput()">Obter no prompt e mostrar no output</button>
+        <br>
+        <button onclick="calcAreaInputOutput()">Obter input e mostrar output</button>
+    </label>
+    <br>
+    <output id="output"></output>
+    <script>
+
+        const raio = document.getElementById("raio")
+        const output = document.getElementById("output")
+
+        function calcAreaPromptAlert() {
+            let raioValue = parseFloat(window.prompt("Informe o valor do raio:"))
+            let area = calculoArea(raioValue)
+            alert(`Área do círculo= ${area}`)
+        }
+
+        function calcAreaInputAlert() {
+            let raioValue = parseFloat(raio.value)
+            let area = calculoArea(raioValue)
+            alert(`Área do círculo= ${area}`)
+        }
+
+        function calcAreaPromptOutput() {
+            let raioValue = parseFloat(window.prompt("Informe o valor do raio:"))
+            let area = calculoArea(raioValue)
+            output.innerHTML = `Área do círculo= ${area}`
+        }
+
+        function calcAreaInputOutput() {
+            let raioValue = parseFloat(raio.value)
+            let area = calculoArea(raioValue)
+            output.innerHTML = `Área do círculo= ${area}`
+        }
+
+        function calculoArea(raio) {
+            let pi = Math.PI
+            let area = pi * (raio ** 2)
+
+            return area
+        }
+
+
+    </script>
+
+</body>
+
+</html>

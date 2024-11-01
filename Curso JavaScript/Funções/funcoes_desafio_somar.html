@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funções - Desafio Somar()</title>
+</head>
+
+<body>
+
+    <h1>Calculadora humilde de 2 números</h1>
+
+    <label for="n1">Digite um número:
+        <input type="number" id="n1">
+    </label>
+    <label for="n2">Digite outro número:
+        <input type="number" id="n2">
+    </label>
+    <button onclick="resultado()">Obter resultado</button>
+    <output id="output"></output>
+
+    <script>
+
+        const output = document.getElementById("output")
+
+        const number_1 = document.getElementById("n1")
+        const number_2 = document.getElementById("n2")
+
+        function resultado() {
+            let number_1_valor = parseFloat(number_1.value)
+            let number_2_valor = parseFloat(number_2.value)
+
+            apagar()
+
+            if (isFinite(number_1_valor) && isFinite(number_2_valor)) {
+                output.innerHTML = somar(number_1_valor, number_2_valor)
+            }
+        }
+
+        function somar(numero1, numero2) {
+            return numero1 + numero2
+        }
+
+        function apagar() {
+            output.innerHTML = ""
+        }
+
+    </script>
+
+</body>
+
+</html>

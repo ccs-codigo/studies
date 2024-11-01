@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funções - Desafio Somar()</title>
+</head>
+
+<body>
+
+    <h1>Calculadora humilde de 4 operações</h1>
+
+    <label for="n1">Digite um número:
+        <input type="number" id="n1">
+    </label>
+    <label for="operador">Operador:
+        <input type="text" id="operador">
+    </label>
+    <label for="n2">Digite outro número:
+        <input type="number" id="n2">
+    </label>
+    <button onclick="msgResultado()">Obter resultado</button>
+    <output id="output"></output>
+
+    <script>
+
+        const output = document.getElementById("output")
+
+        const number1 = document.getElementById("n1")
+        const number2 = document.getElementById("n2")
+        const simbolo = document.getElementById("operador")
+
+        function calcular(n1, n2, simbolo) {
+            
+            apagar()
+
+            switch (simbolo) {
+                case "+":
+                    return n1 + n2
+                case "-":
+                    return n1 - n2
+                case "*":
+                    return n1 * n2
+                case "/":
+                    return n1 / n2
+                default:
+                    null
+            }
+        }
+
+        function msgResultado() {
+            let n1 = parseFloat(number1.value)
+            let n2 = parseFloat(number2.value)
+            let operador = simbolo.value
+            
+            output.innerHTML = calcular(n1,n2,operador)
+        }
+
+        function apagar() {
+            output.innerHTML = ""
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Introdução</legend>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="exemplo@email.com" required autofocus>
+            <br><br>
+            <label for="filhos">Quantidade de filhos</label>
+            <br>
+            <input type="number" id="filhos" min="0">
+            <br><br>
+            <input type="date" min="2022-01-15">
+            <br><br>
+            Possui atividade extra?
+            <label><input type="radio" name="atv" value="s">Sim</label>
+            <label><input type="radio" name="atv" value="n">Não</label>
+            <br><br>
+            <input type="submit" value="mandar">
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+
+            <label>
+                <input type="checkbox" name="interesse" value="html">HTML
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="css">CSS
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="javascript">Javascript
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="python">Python
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="java">Java
+            </label>
+            <br><br>
+
+            <label>Escolha uma línguagem
+                <br>
+                <select name="linguagem" required multiple size="8">
+
+                    <option> Seleciona uma linha</option>
+
+                    <optgroup label="frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">Javascript</option>
+                    </optgroup>
+                    <optgroup label="backend">
+                        <option value="python">Python</option>
+                        <option value="java+">Java</option>
+
+                    </optgroup>
+            </label>
+
+            </select>
+
+            <input type="text" list="linguagemList">
+            <datalist id="linguagemList">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JS"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="PHP"></option>
+            </datalist>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Mensagem</legend>
+            <textarea name="msg" cols="50" rows="7" style="resize: none;" maxlength="10"></textarea>
+
+            <textarea cols="50" rows="8" disabled style="resize: none;">
+                Contrato de utilização
+                1.1 Regra
+
+                1.1 Regra
+
+            </textarea>
+            <label>
+                <input type="checkbox" value="accepted" checked>Li e aceito o contrato
+            </label>
+
+            <br><br>
+            <input type="file">
+
+        </fieldset>
+
+        <input type="hidden" value="dados escondidos">
+        <br><br>
+        <input type="button" value="Botão"> <!--nesse caso o botão precisa de js pra funcionar-->
+        <br><br>
+        <input type="submit" value="mandar">
+        <br><br>
+        <button type="submit">mandar com tag buttom</button>
+        <!-- na tag buttom utiliza o texto e da pra usar outras tags -->
+        <br><br>
+        <button type="button"> <!--nesse caso o botão precisa de js pra funcionar-->
+            <b>botão</b>
+        </button>
+
+        <br><br>
+
+        <input type="search">
+
+        <br><br>
+
+        <input type="range" min="0" max="10" step=".5">
+        
+        <br><br>
+
+        <input type="time">
+
+        <br><br>
+
+        <input type="color">
+
+    </form>
+
+</body>
+
+</html>

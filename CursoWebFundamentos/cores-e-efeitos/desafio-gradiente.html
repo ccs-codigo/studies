@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Desafio Gradiente</title>
+    <style>
+        html{
+            font-size: 62.5%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: brown;
+            margin-bottom: 33vh;
+        }
+        /* .main_cards{
+            width: 80%;
+            margin: 0 auto;
+        } */
+        .main_header .main_title{
+            color: white;
+            font-size: 5em;
+            font-weight: 100;
+            text-align: center;
+        }
+        .all_cards{
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            width: 80%;
+            margin: 0 auto;
+
+            outline: 2px solid green;
+        }
+        .card_primary_row{
+            /* flex-basis: calc(33% - 2em); */
+            flex-basis: clamp(300px, calc(33% - 2em) , 400px);
+            padding: 40px 30px 30px 50px;
+            box-sizing: border-box;
+            background-image: linear-gradient(135deg, transparent 25px, whitesmoke 25px);
+            filter: drop-shadow(0 0 3px #000);
+            position: relative;
+            flex-grow: 1;
+        }
+
+        /* .card_second_row{
+            border: none;
+            width: 30em;
+            height: 20em;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2em;
+            padding: 0 5em;
+            background-image: 
+            conic-gradient(at 35px, whitesmoke 180deg, transparent 180deg),
+            conic-gradient(at 0px 35px, transparent 90deg, whitesmoke 90deg, whitesmoke 270deg),
+            linear-gradient(135deg, transparent 25px, rgb(172, 171, 171) 25px);
+            filter: drop-shadow(0 0 3px black);
+        } */
+
+        .card_second_row{
+            box-sizing: border-box;
+            /* flex-basis: calc(33% - 2em); */
+            flex-basis: clamp(300px, calc(33% - 2em) , 400px);
+            padding: 40px 30px 30px 50px;
+            flex-grow: 1;
+            background-image: 
+            linear-gradient(135deg, transparent 25px, gray 25px),
+            linear-gradient(135deg, transparent 25px, whitesmoke 25px);
+            background-size: 35px 35px, 100%;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 0 3px black);
+        }
+
+        /* .card_third_row{
+            border: none;
+            width: 30em;
+            height: 20em;
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2em;
+            padding: 0 5em;
+            background-image: 
+            conic-gradient(at 35px, whitesmoke 180deg, transparent 180deg),
+            conic-gradient(at 0px 35px, transparent 90deg, whitesmoke 90deg, whitesmoke 270deg);
+            filter: drop-shadow(0 0 3px black);
+            position: relative;
+        } */
+
+        .card_third_row{
+            box-sizing: border-box;
+            /* flex-basis: calc(33% - 2em); */
+            flex-basis: clamp(300px, calc(33% - 2em) , 400px);
+            padding: 40px 30px 30px 50px;
+            flex-grow: 1;
+            background-image: 
+            linear-gradient(135deg, transparent 25px, gray 25px),
+            linear-gradient(135deg, transparent 25px, whitesmoke 25px);
+            background-size: 35px 35px, 100%;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 0 3px black);
+        }
+
+        .card_third_row::before{
+            content: "";
+            display: block;
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(135deg, transparent 25px, rgb(207, 206, 206) 25px); 
+            filter: drop-shadow(0 0 4px #0008);
+        }
+
+
+        /* span{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(135deg, transparent 25px, rgb(207, 206, 206) 25px); 
+            filter: drop-shadow(0 0 4px #0008);
+        } */
+
+        .card_title{
+            font-size: 2em;
+            font-weight: lighter;
+            margin: 0;
+        }
+        .card_text{
+            font-size: 1.5em;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main_cards">
+        <header class="main_header">
+            <h1 class="main_title">Post-its</h1>
+        </header>
+        <section class="all_cards">
+            <article class="card_primary_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_primary_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_primary_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_second_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_second_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_second_row">
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_third_row">
+                <span></span>
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_third_row">
+                <span></span>
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+            <article class="card_third_row">
+                <span></span>
+                <h2 class="card_title">Lorem ipsum dolor</h2>
+                <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorem obcaecati excepturi in laudantium velit, incidunt harum sunt!</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

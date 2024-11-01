@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Imagens responsivas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>tag picture</h1>
+    <!-- usado para tamanhos e resoluções diferentes da msm imagem -->
+    <img src="rwd-images/1280.jpg" alt="texto alternativo"
+        srcset="rwd-images/960.jpg 960w, rwd-images/640.jpg 640w, rwd-images/480.jpg 480w"
+        sizes="(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw">
+
+    <hr>
+    <!-- picture usado para imagens diferentes -->
+    <picture>
+        <source media="(min-width: 900px)"
+            srcset="rwd-images/1280jpg 1280w, rwd-images/960.jpg 960w, rwd-images/640.jpg 640w" sizes="33vw">
+        <source media="(min-width: 600px)"
+            srcset="rwd-images/1280.jpg 1280w, rwd-images/960.jpg 960w, rwd-images/640.jpg 640w" sizes="50vw">
+        <img src="rwd-images/1280.jpg" alt="texto alternativo">
+    </picture>
+</body>
+
+</html>

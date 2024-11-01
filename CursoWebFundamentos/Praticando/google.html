@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, .8);
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        .head-form {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .user-img{
+            border-radius: 100px;
+            max-width: 40px;
+            max-height: 40px;
+            width: auto;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 60%;
+        }
+
+        .search-bar {
+            border: 1px solid gray;
+            padding-left: 10px;
+            width: 400px;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0);
+            height: 35px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .search-bar:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        .search-bar::placeholder {
+            color: rgba(255, 255, 255, .6);
+            padding-left: 2px;
+        }
+
+        .search-bar:focus {
+            color: white;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .btn {
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 8px;
+            background-color: rgba(128, 128, 128, .4);
+            color: white;
+            text-shadow: 1px 1px 0.5px black;
+            border: 0;
+            margin-left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+            font-size: 12px;
+            text-shadow: rgba(0, 0, 0, .1);
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        body footer{
+            position:fixed;
+            bottom: 10px;
+            right: 0;
+        }
+
+        footer{
+            background-color: rgba(0,0,0, .4);
+            width: 100%;
+            padding-left: 10px;
+        }
+
+        p{
+            color: white;
+            border-bottom: 1px solid gray;
+            padding-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .links{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .links-left{
+            width: fit-content;
+        }
+
+        .links-right{
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head-form">
+        <a href="#">Gmail</a>
+        <a href="#">Imagens</a>
+        <img class="user-img" src="/Images/1218864.jpg" alt="User image">
+    </header>
+    <section>
+        <div class="google-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png"
+                alt="Google Logo">
+        </div
+        <form class="search-form">
+            <input type="text" class="search-bar" placeholder="Search Google or type a URL">
+            <div class="buttons">
+                <input type="submit" class="btn" value="Google Search">
+                <input type="button" class="btn" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>Brasil</p>
+        <div class="links">
+            <div class="links-left">
+                <a href="#">Sobre</a>
+                <a href="#">Publicidade</a>
+                <a href="#">Negócios</a>
+                <a href="#">Como funciona a Pesquisa</a>
+            </div>
+            <div class="links-right">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Configurações</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

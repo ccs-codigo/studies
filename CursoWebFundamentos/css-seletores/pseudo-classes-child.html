@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Pseudo classes child</title>
+
+    <style>
+        p:first-child {
+            color: red;
+        }
+
+        p:last-child {
+            color: orange;
+        }
+
+        p:nth-child(3) {
+            background-color: blue;
+        }
+
+        p:first-of-type {
+            background-color: green;
+        }
+
+        p:last-of-type {
+            background-color: red;
+        }
+
+        p:nth-of-type(2) {
+            text-decoration: underline;
+        }
+
+        li:nth-child(odd) {
+            background-color: red;
+        }
+
+        /* dica: (even) é o mesmo que (2n) */
+        /* exemplos: 2n 3n 4n etc... a posição é o número multiplicado pelo n */
+        li:nth-child(even) {
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <p>primeiro paragrafo</p>
+        <p>segundo paragrafo</p>
+        <p>terceiro paragrafo</p>
+    </div>
+    <hr>
+    <div>
+        <a href="#">primeiro link</a>
+        <p>primeiro paragrafo</p>
+        <br>
+        <p>segundo paragrafo</p>
+        <p>terceiro paragrafo</p>
+        <p>quarto paragrafo</p>
+        <span>span de exemplo</span>
+    </div>
+
+    <ul>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+        <li>item da lista</li>
+    </ul>
+
+</body>
+
+</html>

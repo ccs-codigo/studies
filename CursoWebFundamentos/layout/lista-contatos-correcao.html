@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: aqua;
+            margin: 0;
+            padding: 32px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main-title {
+            color: #385555;
+        }
+
+        .list {
+            width: 90%;
+            max-width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            list-style-type: none;
+
+        }
+
+        .list-item {
+            flex-basis: 280px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+            border-radius: 5px;
+            text-align: center;
+            background-image: url(imagens/thumb02.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .list-item__imagem img {
+            border-radius: 50%;
+            width: 80px;
+            margin-top: 120px;
+        }
+
+        .list-item__name {
+            margin: 0;
+            font-size: 24px;
+            color: #385555;
+        }
+
+        .list-item__action {
+            display: flex;
+            background-color: #e5e5e5;
+            justify-content: space-evenly;
+            padding: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="main-title">Lista de contatos</h1>
+
+    <div class="list-wrapper">
+        <ul class="list">
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/1.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Brennan George
+                    </p>
+                    <p class="list-item__email">brennan.george@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/2.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Adam Weaver
+                    </p>
+                    <p class="list-item__email">adam.weaver@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/3.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Troy Butler
+                    </p>
+                    <p class="list-item__email">troy.butler@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/4.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Isobel Lewis
+                    </p>
+                    <p class="list-item__email">isobel.lewis@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/5.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Lisa Garcia
+                    </p>
+                    <p class="list-item__email">lisa.garcia@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+
+            <li class="list-item">
+                <div class="list-item__imagem">
+                    <img src="imagens/6.jpg" alt="Brennan George">
+                </div>
+
+                <div class="list-item__content">
+                    <p class="list-item__name">
+                        Carolyn Silva
+                    </p>
+                    <p class="list-item__email">carolyn.silva@example.com</p>
+                </div>
+
+                <div class="list-item__action">
+                    <a href="#"><img src="imagens/delete.png" alt="Delete"></a>
+                    <a href="#"><img src="imagens/edit.png" alt="Edit"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

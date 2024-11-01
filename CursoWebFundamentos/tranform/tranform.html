@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Tranform</title>
+    <style>
+        body{
+            margin-bottom: 100vh;
+        }
+
+        div{
+            outline: 1px solid #888;
+            width: 80%;
+            height: 200px;
+            margin: .5em auto;
+        }
+
+        p{
+            width: 100%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        /* translate é 50% em relação ao proprio tamanho do elemento */
+        .div1 .destaque{
+            transform: translate(50%, 100%);
+        }
+
+        /* aqui é em relação ao elemento pai */
+        .div2 .destaque{
+            position: relative;
+            left: 50%;
+            top: 50%;
+        }
+
+        .div3 .destaque{
+            transform: rotate(30deg);
+        }
+
+        .div4 .destaque{
+            transform: scale(.75, 1.5);
+        }
+
+        .div5 .destaque{
+            transform: skew(-15deg, -15deg);
+        }
+
+        .div6 .destaque{
+            transform: translate(100px) rotate(30deg);
+            transform-origin: left bottom;
+            /* é a msm coisa transform-origin: 0 100%; onde 0 é o início do objeto e 100% é o tamanho do objeto*/
+        }
+
+        .div7 .destaque{
+            transform: rotate(45deg) translate(100px);
+            transform-origin: left bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div6">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+    <div class="div7">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, magni!
+        </p>
+    </div>
+</body>
+
+</html>

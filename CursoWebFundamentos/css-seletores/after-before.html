@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Pseudo classes child</title>
+
+    <style>
+        p::before {
+            content: "ANTES ";
+        }
+
+        p::after {
+            content: "DEPOIS ";
+        }
+
+        div {
+            border: 2px solid red;
+            padding: 1em;
+            position: relative;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        div::after {
+            content: "";
+            width: 1em;
+            height: 1em;
+            background-color: red;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        div::before{
+            content: url(https://via.placeholder.com/64/0000FF/FFFFFF);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum error. Exercitationem perferendis
+            odio doloribus iste a similique neque voluptate autem officia, blanditiis eos quod?</p>
+    </div>
+
+</body>
+
+</html>

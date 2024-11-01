@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções - Desafio</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de área de um triângulo</h1>
+
+    <input type="number" id="number_1">
+    <input type="number" id="number_2">
+    <button onclick="calculoAreaTriangulo()">Calcular área</button>
+    <div id="output"></div>
+
+    <script>
+
+        const input_1 = document.getElementById("number_1")
+        const input_2 = document.getElementById("number_2")
+
+        const output = document.getElementById("output")
+
+        function calculoAreaTriangulo() {
+            const input_1_value = parseFloat(input_1.value)
+            const input_2_value = parseFloat(input_2.value)
+
+            limparOutput()
+
+            let areaTriangulo = (input_1_value * input_2_value) / 2
+
+            output.innerHTML = `Área do triângulo= ${areaTriangulo}`
+        }
+
+        function limparOutput() {
+            output.innerHTML = ""
+        }
+
+    </script>
+
+</body>
+
+</html>

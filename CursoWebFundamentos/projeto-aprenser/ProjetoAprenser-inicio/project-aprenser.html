@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Aprenser</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Maven+Pro:wght@400..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+    :root {
+        --padding: (0 50px);
+    }
+
+    body {
+        font-family: Maven Pro, Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #2A2A2A;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* position: fixed;
+        top: 5px;
+        width: 100%; */
+        position: sticky;
+            width: 100%;
+            top: 0;
+            left: 0;
+    }
+
+    .header__cont {
+        /* position: fixed; */
+        background-color: #2A2A2A;
+        width: 1270px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1px;
+    }
+
+    .header__logo {
+        background-image: url(imagens/logoAprenser.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 175px;
+        height: 75px;
+    }
+
+    ul {
+        display: flex;
+        gap: 15px;
+        padding-right: 30px;
+    }
+
+    ul li {
+        list-style: none;
+        min-width: fit-content;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #fed001;
+        padding: 10px 15px;
+        border: 1px solid #fed001;
+        text-transform: uppercase;
+    }
+
+    li a:hover {
+        color: #fafafa;
+    }
+
+    .page__1 {
+        background-image: linear-gradient(transparent, rgb(255,255,86));
+        display: flex;
+        justify-content: center;
+    }
+
+    .cont__1 {
+        background-image: url(imagens/HeroImage.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 1440px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cont__1-texts {
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .section__title {
+        font-size: 62px;
+        width: 500px;
+    }
+
+    .btn__cta {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 500;
+        border-radius: 5px;
+        color: black;
+        padding: 15px 40px;
+        background-color: #FED001;
+    }
+
+    .btn__cta:hover {
+        color: #fafafa;
+        text-shadow: 0 1px 2px black;
+    }
+
+    .page__2 {
+        text-align: center;
+        background-color: #fafafa;
+    }
+
+    .cont__2 {
+        height: 664px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .cont__2-title {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    .cont__cursos {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+
+    .article__cont2 {
+        box-shadow: 0 0.1px 1px black;
+        width: 402px;
+        border-radius: 9px;
+        padding-bottom: 20px;
+    }
+
+    .img_bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .article__text2 {
+        text-align: left;
+        padding: 0 30px;
+    }
+
+    .article__title2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .page__3 {
+        background-color: #003464;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .cont__3 {
+        background-image: url(imagens/nossa-escola.png);
+        background-repeat: no-repeat;
+        background-position: bottom left 50px;
+        width: 1340px;
+        height: 564px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .article__cont3 {
+        color: #fafafa;
+        width: 45%;
+    }
+
+    .article__title3 {
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .article__p3 {
+        width: 546px;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .page__4{
+        background-color: #fafafa;
+    }
+
+    .cont__4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .texts__end {
+        width: 300px;
+        align-self: flex-end;
+        text-align: right;
+        padding-right: 85px;
+        line-height: 5px;
+    }
+
+    .end__footer {
+        background-color: #2A2A2A;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fafafa;
+    }
+
+    .google-map {
+        padding-bottom: 50%;
+        position: relative;
+    }
+
+    .google-map iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+</style>
+
+<body>
+
+    <div id="principal">
+
+        <div class="header">
+            <div class="header__cont">
+                <div class="header__logo"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Nossa escola</a></li>
+                        <li><a href="#">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="page__1">
+            <div class="cont__1">
+                <div class="cont__1-texts">
+                    <h1 class="section__title">O saber é o que transforma nosso SER</h1>
+                    <p><a class="btn__cta" href="#">Saiba mais</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__2">
+            <div class="cont__2">
+                <h2 class="cont__2-title">Principais Cursos</h2>
+                <div class="cont__cursos">
+                    <article class="article__cont2">
+                        <div class="img_bg"><img src="imagens/curso-design.png" alt=""></div>
+                        <div class="article__text2">
+                            <p class="article__title2">Design para web</p>
+                            <p class="article__desc">O curso Design para Web é perfeito para aqueles que desejam
+                                aprender a criar designs atraentes e funcionais para sites e aplicativos móveis.</p>
+                        </div>
+                    </article>
+                    <article class="article__cont2">
+                        <div class="img_bg"><img src="imagens/curso-design-1.png" alt=""></div>
+                        <div class="article__text2">
+                            <p class="article__title2">Front End Developer</p>
+                            <p class="article__desc">Aprenda HTML, CSS e Javascript e crei interfaces ricas e semânticas
+                                para páginas web, aplicativos on-line ou até mesmo aplicações para aparelhos celulares
+                            </p>
+                        </div>
+                    </article>
+                    <article class="article__cont2">
+                        <div class="img_bg"><img src="imagens/curso-design-2.png" alt=""></div>
+                        <div class="article__text2">
+                            <p class="article__title2">Back End Developer</p>
+                            <p class="article__desc">Com este curso você vai dominar uma linguagem back-end a sua
+                                escolha, um sistema de banco de dados e aprenderá como funciona o protocolo HTTP na
+                                prática.</p>
+                        </div>
+                    </article>
+                </div>
+                <footer class="footer__page__2">
+                    <p> <a class="btn__cta" href="">Ver mais cursos</a></p>
+                </footer>
+            </div>
+        </section>
+
+        <section class="page__3">
+            <div class="cont__3">
+                <article class="article__cont3">
+                    <h2 class="article__title3">Nossa escola</h2>
+                    <p class="article__p3">Aprenda habilidades tecnológicas em demanda e alcance seus objetivos de
+                        carreira com a nossa escola de tecnologia online. Oferecemos uma ampla gama de cursos online,
+                        desde programação e desenvolvimento de software até design gráfico e análise de dados. Nossos
+                        instrutores experientes fornecerão a você um ambiente de aprendizado interativo e de suporte
+                        para ajudá-lo a adquirir as habilidades necessárias para ter sucesso em sua carreira.
+                        Inscreva-se agora e comece sua jornada para se tornar um profissional de tecnologia
+                        bem-sucedido.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page__4">
+            <div class="cont__4">
+                <h2 class="title__cont4">Contatos</h2>
+                <!-- <div class="img_bg__cont4"><img src="imagens/map.png" alt=""></div> -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.0598814539152!2d-59.98521143038083!3d-3.0302737998090983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1980e6864dfd%3A0xc041c37ed99492cc!2sAv.%20Noel%20Nutels%2C%202059%20-%20Cidade%20Nova%2C%20Manaus%20-%20AM%2C%2069096-000!5e0!3m2!1spt-BR!2sbr!4v1722275344528!5m2!1spt-BR!2sbr"
+                    width="1270px" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="texts__end">
+                    <p class="text__cont4">Av. da Liberdade, 1001</p>
+                    <p class="text__cont4">Tel.: +351 21 123 456</p>
+                    <p class="text__cont4">E-mail: contato@aprenser.com</p>
+                </div>
+            </div>
+        </section>
+        <footer class="end__footer">
+            <p class="end__foter__text">Desenvolvido por Serliv</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

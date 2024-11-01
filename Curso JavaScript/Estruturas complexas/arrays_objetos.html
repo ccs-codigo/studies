@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays com objetos</title>
+</head>
+
+<body>
+
+    <h1>Arrays com Objetos</h1>
+
+    <ul id="pessoas">
+        <li>Nome: Carlos - Email: carlos@gmail.com</li>
+    </ul>
+
+    <script defer>
+
+        const pessoas = [
+            {nome: "Gabriel", email: "gabriel@gmail.com"},
+            {nome: "Daniel", email: "daniel@gmail.com"},
+            {nome: "Maria", email: "maria@gmail.com"},
+            {nome: "João", email: "joao@gmail.com"},
+            {nome: "Fernanda", email: "fernanda@gmail.com"}
+        ]
+
+        let listaPessoas = document.getElementById("pessoas")
+
+        for (let i = 0; i < pessoas.length; i++) {
+            listaPessoas.innerHTML += (`<li> Nome: ${pessoas[i].nome}  - Email: ${pessoas[i].email} </li>`)
+        }
+
+    </script>
+
+</body>
+
+</html>

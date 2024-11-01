@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aprendendo Box Model</title>
+    <meta name="description" content="Descrição da página">
+    <meta name="keywords" content="css, javascript, html">
+    <meta name="author" content="Gabriel Caldas">
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        p {
+            background-color: rgb(167, 167, 167);
+            margin-top: 0;
+            /* padding-top: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            padding-right: 36px; 
+            padding: 20px 36px 20px 20px;*/
+        }
+
+        h1 {
+            background-color: antiquewhite;
+            padding: 15px;
+        }
+
+        h2 {
+            background-color: green;
+            margin-top: 56px;
+
+            /* height: 50%; altura em porcentagem se comporta de maneira estranha, tomar cuidado/evitar
+            
+                         p {
+                margin-top: 50px;
+                margin-right: 40px;
+                margin-bottom: 30px;
+                margin-left: 20px;
+
+                dica: segue sentido horário
+                
+                atalho => p{ margin: 50px 40px 30px 20px; }
+                esse ataho serve para padding, margin, border
+            } */
+        }
+
+        .destaque {
+            background-color: orange;
+        }
+
+        .size {
+            width: 50%;
+            height: 100px;
+        }
+
+        .padding {
+            padding: 26px;
+        }
+
+        .margin {
+            margin: 50px 0 20px 100px;
+        }
+
+        .borda {
+            /* border: 5px solid red; */
+            border-top: 10px solid red;
+            border-right: 10px dashed yellow;
+            border-bottom: 10px dotted blue;
+            border-left: 10px groove green;
+            padding: 5px;
+        }
+
+        .outline {
+            outline: 10px dashed red;
+        }
+
+        .borda2 {
+            border: 10px dashed blue;
+        }
+    </style> d
+</head>
+
+<body>
+    <h1>Box Model</h1>
+
+    <h2>Width e Height</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque size">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Padding</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque padding">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Margin</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque margin">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Border</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque borda">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <h2>Outline</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque outline">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p class="destaque outline borda2">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+</body>
+
+</html>

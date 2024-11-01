@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+</head>
+
+<body>
+
+    <h1>Verificação de número par</h1>
+
+    <label for="numberId">Digite um número:
+        <input type="number" id="numberId">
+    </label>
+    <button onclick="numeroPar()">Verificar se número é par ou ímpar</button>
+    <output id="output"></output>
+
+    <script>
+
+        const output = document.getElementById("output")
+
+        let numeroInput = document.getElementById("numberId")
+
+        function numeroPar() {
+            let inputValue = parseFloat(numeroInput.value)
+            if (inputValue % 2 === 0) {
+                output.innerHTML = `O número ${inputValue} é par`
+            } else {
+                output.innerHTML = `O número ${inputValue} é ímpar`
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

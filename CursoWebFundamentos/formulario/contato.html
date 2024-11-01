@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Contato</title>
+
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #181818;
+            color: white;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 90%;
+            min-width: 28.125em;
+            max-width: 35em;
+            background-color: #0e1010;
+            padding: 1em;
+        }
+
+        legend {
+            text-align: center;
+            color: #8e999a;
+            font-weight: bold;
+            font-size: 1.3em;
+            padding: .5em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input,
+        textarea {
+            background-color: rgba(0, 0, 0, .3);
+            padding: .75em;
+            margin: .5em 0 2.5em;
+            border: 2px solid transparent;
+            border-bottom-color: #bbb;
+            color: white;
+            outline: 0;
+        }
+
+        .btn {
+            background-color: #2a2727;
+            color: white;
+            cursor: pointer;
+            padding: .7em;
+            font-size: 1.2em;
+            border: none;
+        }
+
+        input:invalid:focus,
+        textarea:invalid:focus {
+            border-bottom: 2px solid #ff000d;
+        }
+
+        input:valid:focus,
+        textarea:valid:focus {
+            border-bottom: 2px solid #0ec72a;
+        }
+
+
+        input:focus,
+        textarea:focus {
+            border-bottom: 2px solid #8e999a;
+            background-color: #2a2727;
+        }
+
+        input:hover,
+        textarea:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form action="" method="get" autocomplete="off">
+        <!--get só pra testar mas pra enviar dados pessoais é melhor post-->
+        <legend>Formulário de contato</legend>
+
+        <fieldset>
+
+            <label for="vNome">Seu nome</label>
+            <input type="text" name="name" minlength="5" id="vNome" required placeholder="Digite seu nome completo">
+
+            <label for="vEmail">Email</label>
+            <input type="email" name="email" id="vEmail" required placeholder="Digite um email válido">
+
+            <label for="vAssunto">Assunto</label>
+            <input type="text" name="assunto" id="vAssunto">
+
+            <label for="vMsg">Mensagem</label>
+            <textarea name="mensagem" id="vMsg" rows="7" required maxlength="510" minlength="20" placeholder="conte-nos tudo"></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

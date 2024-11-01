@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Objetos</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Informações de um aluno(a):</h1>
+
+    <div id="output">
+
+    </div>
+
+    <script>
+
+        const aluno = {
+            nome: "Daniel",
+            notas: [10, 7, 3, 8]
+        }
+
+        let media = 0
+        let soma = 0
+
+        let alunos = document.getElementById("output")
+
+        alunos.innerHTML +=
+            `<h2>Nome do aluno: ${aluno.nome}</h2> 
+        <p>Notas: </p>`
+        alunos.innerHTML += "<ul>"
+        for (let i = 0; i < aluno.notas.length; i++) {
+            alunos.innerHTML += `<li>${aluno.notas[i]}</li>`
+            soma += aluno.notas[i]
+        }
+        media = soma / aluno.notas.length
+
+        alunos.innerHTML += "</ul>"
+        alunos.innerHTML += `<p>Soma das Notas: ${soma}</p>`
+        alunos.innerHTML += `<p>Média: ${media}</p>`
+        let situacao = (media >= 7) ? "Aprovado" : "Reprovado"
+        alunos.innerHTML += `<p>Situação: ${situacao}</p>`
+
+    </script>
+
+</body>
+
+</html>

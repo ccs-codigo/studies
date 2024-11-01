@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Checkbox</title>
+    <style>
+        /* label>span {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            background-color: white;
+            border: 1px solid #888;
+            border-radius: 2.5px;
+            margin-right: 5px;
+        }
+
+        input[type=checkbox] {
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            outline: 0;
+            opacity: 0;
+        }
+
+        input[type="checkbox"]:focus+label>span {
+            outline: 1.5px solid black;
+            outline-offset: 1px;
+        }
+
+        span>span {
+            display: block;
+            transform: translate(30%, 20%) scale(.5) rotate(-42.5deg);
+            width: 37%;
+            height: 90%;
+        }
+
+        span .span {
+            display: block;
+            transform: translate(114%, -74%) scale(.5) rotate(39deg) skew(-3deg, 10deg);
+            width: 37%;
+            height: 162.5%;
+        }
+
+        input[type=checkbox]:checked+label span>span {
+            background-color: white;
+        }
+
+        input[type=checkbox]:checked+label>span {
+            background-color: #888;
+        }
+
+        label>span:hover {
+            border: 1px solid rgba(0, 0, 0, .7);
+        }
+
+        input[type=checkbox]:checked+label>span:hover {
+            background-color: rgba(0, 0, 0, .6);
+            border: 1px solid transparent;
+        } */
+
+        .switch{
+            position: relative;
+        }
+        
+        .switch>input{
+            display: inline-block;
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            opacity: 0;
+        }
+
+        .chk:checked + .chkSpan{
+            background-color: rgb(38, 38, 190);
+            border: 2px solid rgb(38, 38, 190);
+            transition: linear 0.2s;
+        }
+
+        .switch .chk:focus + .chkSpan{
+            outline: 2px solid black;
+            outline-offset: 1px;
+            transition: none;
+        }
+
+        .switch .chkSpan{
+            display: inline-block;
+            width: 35px;
+            height: 15px;
+            background-color: #8f8f8f;
+            border: 2px solid #8f8f8f;
+            border-radius: 15px ;
+            transition: linear 0.2s;
+        }
+
+        .switch .chkSpan::before{
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            transform: translate(0);
+            transition: linear .3s;
+        }
+
+        .switch input[type="checkbox"]:checked + .chkSpan::before{
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            transform: translate(135%);
+            transition: translate(135%) .3s;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Checkbox</h1>
+
+    <input type="checkbox" id="html" checked>
+    <label for="html">
+        <span>
+            <span></span>
+            <span class="span"></span>
+        </span>HTML
+    </label>
+
+    <input type="checkbox" id="css">
+    <label for="css">
+        <span>
+            <span></span>
+            <span class="span"></span>
+        </span>
+        CSS
+    </label>
+
+    <input type="checkbox" id="js">
+    <label for="js">
+        <span>
+            <span></span>
+            <span class="span"></span>
+        </span>
+        JS
+    </label>
+
+    <hr>
+
+    <label class="switch">
+        <input type="checkbox" class="chk" checked>
+        <span class="chkSpan"></span>
+        HTML
+    </label>
+    <label class="switch">
+        <input type="checkbox" class="chk">
+        <span class="chkSpan"></span>
+        CSS
+    </label>
+    <label class="switch">
+        <input type="checkbox" class="chk">
+        <span class="chkSpan"></span>
+        Javascript
+    </label>
+</body>
+
+</html>

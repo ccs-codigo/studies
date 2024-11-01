@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch</title>
+</head>
+<body>
+
+    <h1>try ... catch(error)</h1>
+
+        <!-- correto é "output", o "teste" é só pra ver o error -->
+    <div id="teste"></div>
+
+    <script>
+
+        let obj = {
+            nome: "Daniel",
+            email: "daniel@gmail.com"
+        }
+
+        try {
+            document.getElementById("output").innerHTML = `Nome: ${obj.nome} - Email: ${obj.email}`
+        } catch (error) {
+            console.log(error)
+            console.log(error.message)
+            alert("deu ruim!!!" + error.message)
+        } finally {
+            alert("fim do programa")
+        }
+
+    </script>
+    
+</body>
+</html>

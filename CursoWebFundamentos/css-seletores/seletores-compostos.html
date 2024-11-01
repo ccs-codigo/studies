@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Seletores compostos</title>
+
+    <style>
+
+        article{
+            outline: 4px solid green;
+        }
+
+        article a{
+            color: red;
+        }
+
+        article a > b{
+            color: green;
+        }
+
+        h3 + p{
+            background-color: yellow;
+        }
+
+        hr ~ p{
+            border: 4px dashed orangered;
+        }
+
+        .destaque{
+            padding-left: 2rem;
+        }
+
+        p:not(.destaque){
+            background-color: gray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>paragrafo <a href="#">link falso em <b>negrito</b></a></p>
+
+    <article>
+
+        <p>paragrafo antes do titulo com <b>negrito</b></p>        
+
+        <h3>titulo</h3>
+
+        <p>paragrafo qualquer </p>
+
+        <h3>titulo</h3>
+
+        <hr>
+
+        <p>paragrafo <a href="#">link falso em <b>negrito</b></a></p>
+        <p class="destaque">paragrafo <a href="#">link falso em <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">link falso em <b>negrito</b></a></p>
+    </article>
+
+    <p>paragrafo <a href="#">link falso em <b>negrito</b></a></p>
+
+</body>
+
+</html>

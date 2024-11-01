@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de área de circunferência</h1>
+    <label for="raio">Informe o raio da circunferência: 
+        <input type="number" id="raio">
+        <button onclick="calcAreaCirc()">Calcular</button>
+    </label>
+    <br>
+    <output id="output"></output>
+    <script>
+        // fórmula para calcular a área de um círculo é A = π r², onde π é a constante Pi, aproximadamente 3,1415, e r é o raio do círculo. 
+
+        const raio = document.getElementById("raio")
+        const output = document.getElementById("output")
+
+        function calcAreaCirc(){
+            const raioValue = parseFloat(raio.value)
+            let pi = Math.PI
+            let area = pi * (raioValue**2)
+            output.innerHTML = `Área do círculo= ${parseInt(area)}`
+        }
+
+    </script>
+
+</body>
+
+</html>

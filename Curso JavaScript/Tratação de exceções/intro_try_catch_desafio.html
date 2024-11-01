@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch</title>
+</head>
+
+<body>
+
+    <h1>try ... catch(error)</h1>
+
+    <script src="calculoAreas.js"></script>
+
+    <script>
+
+        try {
+            let areaTri = areaTriangulo(2, 3)
+            let areaRet = areaRetangulo(2, 3)
+            let areaCirc = areaCirculo(Math.PI, "as").toFixed(2)
+            console.log("areaTriangulo = " + areaTri)
+            console.log("areaRetangulo = " + areaRet)
+            console.log("areaCirculo = " + areaCirc)
+        } catch (e) {
+            console.log("deu ruim: " + e.message)
+        } finally {
+            console.log("fim do programa")
+        }
+
+
+    </script>
+
+</body>
+
+</html>

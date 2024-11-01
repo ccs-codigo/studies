@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Meter & Progress</title>
+</head>
+
+<body>
+
+    <h1>Meter</h1>
+
+    <label for="combustivel">Nível do combustível
+    </label>
+    <meter id="combustivel" min="0" max="100" low="30" high="90" optimum="95" value="25"></meter>
+
+
+    <h1>Progress</h1>
+
+    <label>Porcentagem da tarefa
+        <br>
+        <progress max="100" value="50"> 50% </progress>
+    </label>
+    <br><br>
+
+    <form oninput="result.value = a.value*b.value">
+        <input type="number" name="a" id="a"> X
+        <input type="number" name="b" id="b"> =
+        <output name="result" for="a b"></output>
+
+    </form>
+
+</body>
+
+</html>

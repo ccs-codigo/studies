@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Lista de contatos</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: aqua;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            width: 200px;
+            text-align: center;
+            color: rgba(0, 0, 0, .8);
+            text-shadow: 1px 1px 1px rgba(128, 128, 128, .2);
+
+        }
+
+        main {
+            background-color: #fff;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+        }
+
+        section {
+            height: 300px;
+            width: 375px;
+            overflow-y: scroll;
+        }
+
+        .contact {
+            padding: 10px;
+            border-bottom: 1px solid rgba(128, 128, 128, .2);
+            display: flex;
+
+        }
+
+        .contact:hover {
+            background-color: rgba(0, 0, 0, .1);
+
+        }
+
+        .contact:hover .contact-icons {
+            opacity: .3;
+        }
+
+        .contact-icons {
+            width: 200px;
+            display: flex;
+            align-self: center;
+            opacity: 0;
+            justify-content: flex-end;
+        }
+
+        .delete,
+        .edit {
+            margin: 5px;
+            padding: 2px;
+        }
+
+        .img {
+            border-radius: 50%;
+            height: 60px;
+            margin-bottom: 5px;
+        }
+
+        .contact-name {
+            margin-left: 15px;
+        }
+
+        header {
+            font-size: 18px;
+            text-shadow: 1px 1px 1px rgba(128, 128, 128, .2);
+        }
+
+        p {
+            font-size: 12px;
+            color: gray;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="title">
+        <h1>Contact list</h1>
+    </div>
+    <main>
+        <section>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/men/66.jpg" alt="">
+                <div class="contact-name">
+                    <header>Brennan George</header>
+                    <p>brennan.george@example.com</p>
+                </div>
+
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+
+            </div>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/men/7.jpg" alt="">
+                <div class="contact-name">
+                    <header>Isobel Lewis</header>
+                    <p>isobel.lewis@example.com</p>
+                </div>
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+            </div>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/men/16.jpg" alt="">
+                <div class="contact-name">
+                    <header>Adam Weaver</header>
+                    <p>adam.weaver@example.com</p>
+                </div>
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+            </div>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/men/80.jpg" alt="">
+                <div class="contact-name">
+                    <header>Troy Butler</header>
+                    <p>troy@example.com</p>
+                </div>
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+            </div>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/women/2.jpg" alt="">
+                <div class="contact-name">
+                    <header>Lisa Garcia</header>
+                    <p>lisa.garcia@example.com</p>
+                </div>
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+            </div>
+            <div class="contact">
+                <img class="img" src="https://randomuser.me/api/portraits/women/62.jpg" alt="">
+                <div class="contact-name">
+                    <header>Carolyn Silva</header>
+                    <p>carolyn.silva@example.com</p>
+                </div>
+                <div class="contact-icons">
+                    <img class="delete" src="images/delete.png" alt="">
+                    <img class="edit" src="images/edit.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
