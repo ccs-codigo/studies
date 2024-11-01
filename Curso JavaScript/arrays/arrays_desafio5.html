@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>Arrays - Desafio 5</h1>
+
+    <script>
+
+        const numeros = [2, undefined, 31, 0, "9", 12, "qualquer texto", 98, false, [], null]
+        // const numeros = [2,3,4,5,6,7,8,9, "10", undefined, "teste", null]
+        let soma = 0
+
+        for (let i = 0; i < numeros.length; i++) {
+            
+            if (isFinite(numeros[i])) {
+                let n = Number(numeros[i])
+                soma += n
+            } else {
+                continue
+            }
+        }
+
+        document.write('A soma total é: ' + soma)
+
+
+    </script>
+
+</body>
+
+</html>

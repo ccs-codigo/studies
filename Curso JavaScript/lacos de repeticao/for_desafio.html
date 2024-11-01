@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>Laços de repetição for desafio</h1>
+
+    <script>
+
+        let x = 0
+        let y = 1
+        let contador
+
+        for (contador = 0; x != y; contador++) {
+            x = parseInt(Math.random() * 6 + 1)
+            y = parseInt(Math.random() * 6 + 1)
+            document.write('<br>' + x + ' - ' + y)
+            document.write('<br>' + 'Dados rolados ' + (contador + 1) + ' vez(es).')
+        }
+
+        document.write('<br><br>' + 'Foram necessárias ' + contador + ' vezes para os dados terem o mesmo valor!')
+
+
+    </script>
+
+</body>
+
+</html>

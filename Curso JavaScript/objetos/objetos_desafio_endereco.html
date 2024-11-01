@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Curso JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>
+        Curso JS | Objetos
+    </h1>
+
+    <script>
+
+        // A ordem dos objetos importa! Por exemplo, para acessar 
+        // endereco, ele precisa existir antes, ou seja, ORDEM
+
+        const endereco = {
+            logradouro: "Rua das Tulias",
+            numero: 302
+        }
+
+        const pessoas = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            // endereco: endereco
+            endereco
+            // quando o nome da propriedade for igual ao objeto
+            //ou variável, pode-se omitir o ome do objeto
+        }
+
+
+        document.write(`${pessoas.nome} ${pessoas.sobrenome} mora na rua ${pessoas.endereco.logradouro} de número ${pessoas.endereco.numero}.`)
+
+    </script>
+
+</body>
+
+</html>

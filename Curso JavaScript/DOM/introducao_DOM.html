@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <!-- <script defer src="intro01.js"></script> -->
+
+</head>
+
+<body>
+
+    <h1 id="titulo">Título do documento</h1>
+
+    <p id="paragrafo">Parágrafo do documento, palavra em <i>itálico</i>, palavra normal</p>
+
+    <hr>
+
+    <input type="text" id="user" placeholder="teste" value="valor preenchido">
+
+    <hr>
+
+    <h2>Lista de tarefas</h2>
+
+    <ol id="listaTarefas">
+        <li>Aprender CSS</li>
+        <li>Aprender JavaScript</li>
+        <li>Aprender DOM</li>
+        <li>Criar algo</li>
+    </ol>
+
+    <script>
+        document.getElementById("titulo").textContent = "titulo alterado por js"
+
+        const lista = document.getElementById("listaTarefas")
+        let novaTarefas = "Aplicar nova vaga emprego"
+
+        lista.innerHTML += ("<li>novaTarefas</li>")
+
+    </script>
+
+</body>
+
+</html>

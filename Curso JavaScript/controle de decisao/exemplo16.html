@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>controle de decisao desafio</h1>
+
+    <script>
+
+        let x = parseFloat(prompt('Digite um número de 0 a 10: '))
+        let y = parseFloat()
+
+        if (x < 0 || x > 10){
+            alert('Digite apenas números entre 0 e 10.')
+        } else {
+            y = prompt('Digite outro número entre 0 e 10: ')
+            if (y < 0 || y > 10) {
+                alert('Digite apenas números entre 0 e 10.')
+            } else {
+                alert('Números digitados: ' + x + ' e ' + y)
+            }
+        }
+
+        alert('Fim do programa!')
+
+    </script>
+
+</body>
+
+</html>

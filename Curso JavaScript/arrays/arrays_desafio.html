@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Arrays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <h1>Arrays - Introdução</h1>
+    
+    <script>
+        
+        let nomes = ["João","Maria","Daniel","Beatriz","Gabriel"]
+
+        let nomeDigitado = prompt('Digite o nome: ')
+
+        nomes[nomes.length] = nomeDigitado
+        
+        for (let i = 0; i < nomes.length; i++) {
+            document.write('Nomes: ' + nomes[i] + '<br>')
+        }
+
+        document.write('Qtd de nomes: ' + nomes.length)
+
+    </script>
+
+</body>
+</html>

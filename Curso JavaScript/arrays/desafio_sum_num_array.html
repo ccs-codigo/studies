@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Desafio Soma Números Array</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>Curso JS</h1>
+
+    <script>
+
+        const numeros = [10, "5", 45, undefined, 50, 'qualquer coisa', 100, [], null];
+        let sum = 0;
+
+        document.write(numeros);
+
+        for (let i = 0; i < numeros.length; i++) {
+            let n = numeros[i];
+
+            // Verifica se o valor pode ser convertido para número e é válido
+            if (typeof n === "number" && !isNaN(n)) {
+                document.write('<br>' + n);
+                sum += n;
+            } else if (typeof n === "string" && !isNaN(parseFloat(n))) {
+                document.write('<br>' + n);
+                sum += parseFloat(n); // Converte a string numérica para número e soma
+            }
+        }
+
+        document.write('<br><br>' + sum);
+
+
+    </script>
+
+</body>
+
+</html>

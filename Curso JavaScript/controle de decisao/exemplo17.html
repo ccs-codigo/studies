@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>controle de decisao desafio</h1>
+
+    <script>
+
+        let x = parseFloat(prompt('Digite um número: '))
+
+        // isNaN determina se o valor é NaN ou não
+        // isFinite determina se o valor transmitido é um número finito
+
+        if (isNaN(x)) {
+            alert('Digite um caractere númerico!')
+        } else {
+            alert('O número digitado foi: ' + x)
+        }
+
+        alert('Fim do programa.')
+
+    </script>
+
+</body>
+
+</html>

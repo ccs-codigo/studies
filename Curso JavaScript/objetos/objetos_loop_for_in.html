@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Curso JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>
+        Curso JS | Objetos
+    </h1>
+
+    <script>
+
+        const endereco = {
+            logradouro: "Rua das Tulias",
+            numero: 302
+        }
+
+        const pessoa = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            endereco
+        }
+
+        // for in serve para interagir com um objeto
+        for (let prop in pessoa) {
+            console.log(prop)
+            console.log(pessoa[prop])
+        }
+
+    </script>
+
+</body>
+
+</html>

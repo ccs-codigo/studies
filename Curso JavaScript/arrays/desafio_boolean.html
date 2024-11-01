@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Desafio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <h1>Curso JS</h1>
+
+    <script>
+
+        const valores = [1, 10, null, 50, 52, undefined, 'texto', 63]
+        let encontrou = false
+        
+        for (let i = 0; i < valores.length; i++) {
+            n = valores[i]
+            if(isNaN(n) || n == null || n == undefined){
+                encontrou = true
+                document.write('<br> Valor não numérico encontrado! ' + encontrou)
+                break
+            }
+        }
+
+    </script>
+
+</body>
+</html>

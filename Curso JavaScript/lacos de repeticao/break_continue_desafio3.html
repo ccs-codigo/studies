@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>Laços de repetição for desafio</h1>
+
+    <script>
+
+        for (let numero = 0; numero <= 100; numero++) {
+            if (numero % 10 === 0) {
+
+                document.write('<br>')
+                continue
+            }
+
+            let x = parseInt(Math.random() * 100 + 1)
+            document.write('<br>Número sorteado: ' + x)
+            document.write('<br> Ordem: ' + numero)
+
+
+            if (numero % x === 0) {
+                break
+            }
+
+        }
+
+        document.write('<br>Fim do progama.')
+
+    </script>
+
+</body>
+
+</html>

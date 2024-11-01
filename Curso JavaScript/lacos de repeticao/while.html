@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1>Lacos de repetição while</h1>
+
+    <script>
+
+        let n = parseFloat(prompt('Digite um número: '))
+        
+        if (isNaN(n)) {
+            document.write('Digite um número válido!')
+        } else {
+            let contador = 0
+            while (contador <= 1000) {
+                document.write(n + ' x ' + contador + ': ' + n * contador + "<br>")
+                contador++
+            }
+
+            document.write("saiu do loop")
+            // document.write() usado mais por questões didáticas
+        }
+
+    </script>
+
+</body>
+
+</html>

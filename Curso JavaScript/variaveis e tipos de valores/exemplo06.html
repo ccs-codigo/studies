@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>Boolean, Number e String - typeof</h1>
+
+    <script>
+
+        let mensagem = 'olá sou uma "mensagem de texto"'
+        console.log(mensagem)
+
+        console.log(typeof 0)
+        console.log(typeof "0")
+        console.log(typeof String(0))
+
+        let isValid = true
+
+        console.log(typeof isValid)
+
+        console.log(Boolean("0"))
+        console.log(Boolean(0))
+        console.log(Boolean(undefined))
+        console.log(Boolean(null))
+        console.log(Boolean(NaN))
+        console.log(Boolean(""))
+
+        let naoDeclarado
+        console.log(naoDeclarado)
+        naoDeclarado = 0
+        console.log(naoDeclarado)
+
+        let n = parseFloat("a")
+        console.log(n)
+        console.log(typeof n)
+
+        console.log(typeof undefined)
+        console.log(typeof null)
+        console.log(typeof 0)
+        console.log(typeof "")
+        console.log(typeof true)
+
+        console.log(typeof (10 .toString()))
+        console.log(typeof ((10).toString()))
+        console.log(typeof (10.0.toString()))
+
+    </script>
+
+</body>
+
+</html>
