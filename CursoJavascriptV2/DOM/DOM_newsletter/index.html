@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="pt-br">
 
@@ -6,6 +6,7 @@
     <title> pagina de exemplo de DOM </title>
     <meta charset="utf-8">
     <meta name="author" content="Daniel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="descrição bacanuda">
     <meta name="keywords" content="html5, tecnologia">
 
@@ -17,13 +18,20 @@
     <div id="principal">
         <header class="hero">
 
-            <div class="top-bar">
-                <p>Bem-vindo(a), </p>
-            </div>
+
 
             <div class="hero-content">
                 <h1>Curso Javascript Completo</h1>
-                <p>Aprenda Javascript de verdade</p>
+                <h2>Cadastre-se em nossa newsletter</h2>
+                <div id="newsletterForm">
+                    <label for="txtEmail">Email:</label>
+                    <input type="email" onblur="disabledEmail()" id="txtEmail" autocomplete="off" disabled value="gabriel@gmail.com">
+                    <button id="btnEdit" onclick="editarEmail()">Editar</button>
+                    <button id="btn" onclick="cadastrarEmail()">Enviar</button>
+                </div>
+                <div id="newsletterFeedback">
+
+                </div>
             </div>
         </header>
 
@@ -65,6 +73,7 @@
         </footer>
     </div>
 
+    <script src="js/newsletter.js"></script>
 </body>
 
 </html>
