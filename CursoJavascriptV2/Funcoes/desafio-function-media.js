@@ -11,6 +11,6 @@
         }
         return total / qtd
     }
-    let media = calcMedia() || 0
+    let media = calcMedia(10,20) || 0
     console.log(media)
 })()
