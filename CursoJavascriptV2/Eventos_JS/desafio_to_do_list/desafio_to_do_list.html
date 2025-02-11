@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>To do list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="./../../../node_modules/normalize.css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="desafio_to_do_list.css"
+    />
+  </head>
+  <body>
+    <div class="hero_content">
+      <main class="hero_main">
+        <div class="list_content">
+          <header class="list_header">
+            <h1>todo List</h1>
+            <div class="insert_content">
+              <input
+                type="text"
+                name=""
+                id="textInput"
+                placeholder="New Item"
+                autofocus
+              />
+              <button type="submit">Add</button>
+            </div>
+          </header>
+          <div class="list_body">
+            <section class="list_Card">
+              <input type="checkbox" />
+              <p>Example</p>
+              <span class="editButton"
+                ><i class="fa-solid fa-pen-to-square"></i
+              ></span>
+              <span class="deleteButton"
+                ><i class="fa-solid fa-trash"></i
+              ></span>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="desafio_to_do_list.js"></script>
+    <script
+      src="https://kit.fontawesome.com/382891e078.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+:root{
+    --padding: 20px;
+    --primaryColor: rgb(101, 118, 196);
+    --gap: 1em;
+    --width_100: 100%;
+    --boxShadow: 0px 0px 15px 5px rgba(0, 0, 0, .2);
+    --brightness: brightness(1.25);
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.hero_content{
+    min-width: 40em;
+    width: 50em;
+    max-width: min(33%, 60px);
+}
+
+.list_content{
+    box-shadow: var(--boxShadow);
+    border-radius: 5px;
+}
+
+.list_header{
+    border-radius: 5px 5px 0 0;
+    background-color: var(--primaryColor);
+    padding: var(--padding);
+}
+
+.insert_content{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+}
+
+.insert_content input{
+    width: var(--width_100);
+    padding: 10px;
+}
+
+.insert_content input:focus{
+    outline: none;
+}
+
+.insert_content input::placeholder{
+    color: rgba(128, 128, 128, 0.733);
+}
+
+.insert_content button{
+    padding: 10px 20px;
+    background-color: rgb(218, 206, 32);
+    border: none;
+}
+
+.insert_content button:hover{
+    filter: var(--brightness);
+}
+
+.insert_content button:active{
+    scale: 0.975;
+}
+
+.list_body{
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    overflow: auto;
+    max-height: 35em;
+}
+
+.list_Card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    box-shadow: var(--boxShadow);
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.list_Card input{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.list_Card p{
+    width: var(--width_100);
+    background-color: rgba(175, 175, 175, 0.301);
+    padding: 10px;
+    letter-spacing: .15em;
+    opacity: 75%;
+    font-size: 1em;
+}
+
+.list_Card span i{
+    font-size: 1.75em;
+}
+
+.editButton i{
+    color: var(--primaryColor);
+}
+
+.deleteButton i{
+    color: rgb(202, 98, 98);
+}
+
+.list_Card span>i:hover {
+    filter: var(--brightness);
+    transform: scale(1.05);
+}
+.list_Card span>i:active {
+    transform: scale(0.95);
+}
+

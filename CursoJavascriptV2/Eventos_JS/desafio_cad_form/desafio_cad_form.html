@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cadastro de tarefas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="desafio_cad_form.css"
+    />
+  </head>
+  <body>
+    <div class="msgTop">
+      <span>Insira um título da tarefa no campo "Título".</span>
+    </div>
+    <div class="hero">
+      <form action="#" class="form">
+        <div class="h1">
+          <h1>Cadastre uma tarefa</h1>
+        </div>
+        <div class="titulo">
+          <label for="titulo">Título</label>
+          <input
+            type="text"
+            name="titulo"
+            id="titulo"
+            maxlength="75"
+            autofocus
+            placeholder="digite aqui o título da tarefa"
+          />
+        </div>
+        <div class="descTarefa">
+          <label for="descTarefa">Descrição da tarefa</label>
+          <textarea
+            name="descTarefa"
+            id="descTarefa"
+            maxlength="255"
+            rows="8"
+            placeholder="digite aqui a descrição da tarefa"
+          ></textarea>
+        </div>
+        <div class="contCaracteres">
+          <p></p>
+        </div>
+        <div class="chk">
+          <input type="checkbox" id="chk" onclick="toggleButtonState()" />
+          <label for="chk"
+            >Comprometo-me a entregar esta tarefa o quanto antes
+          </label>
+        </div>
+        <div class="btnAdd">
+          <input
+            type="submit"
+            value="Adicionar"
+            disabled
+            onclick="validateInput()"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="desafio_cad_form.js"></script>
+  </body>
+</html>

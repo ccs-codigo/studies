@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        width: 100%;
+      }
+      h1 {
+        text-align: center;
+        box-shadow: 2px 0px 2px red;
+      }
+      .container2 {
+        background-color: red;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Eventos JS</h1>
+    <button id="btn1">botao 1</button>
+    <button id="btn2" onclick="console.log('click com atributo onclick')">
+      botao 2
+    </button>
+    <button id="btn3">botao 3</button>
+    <hr />
+    <h1>Delegação de eventos</h1>
+    <div class="container2">
+      <button>Botao 1</button>
+      <button>Botao 2</button>
+      <button>Botao 3</button>
+    </div>
+
+    <script>
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const btn3 = document.getElementById("btn3");
+
+      function clicou() {
+        console.log("click funcao clicou");
+      }
+
+      btn1.onclick = function () {
+        console.log("click btn1 funcao anonima");
+      };
+      btn1.onclick = clicou;
+
+      btn2.addEventListener("click", clicou);
+
+      btn2.addEventListener("click", function () {
+        console.log("click btn2 funcao anonima");
+      });
+
+      btn2.onclick = function () {
+        console.log("funcao anonima no btn2 DOM level 0");
+      };
+
+      btn3.addEventListener(
+        "click",
+        function (event) {
+          console.log(event);
+          event.stopPropagation();
+          console.log("Clicou no btn3");
+        },
+        false
+      );
+
+      document.addEventListener(
+        "click",
+        function (e) {
+          console.log("clicou no document");
+          console.log(e.target);
+        },
+        false
+      );
+
+      const container2 = document.querySelector(".container2");
+      const botaos = document.querySelectorAll(".container2 button");
+
+      // [...botaos].forEach((btn) => {
+      //   btn.addEventListener("click", (e) => {
+      //     e.stopPropagation();
+      //     console.log(e.target);
+      //   });
+      // });
+
+      //o maneira abaixo é mais performática e otimizada
+
+      container2.addEventListener("click", function (e) {
+        // e.stopPropagation();
+        console.log("exemplo de clicar no container2");
+        console.log(e.target, " = e.target exemplo");
+        console.log(e.currentTarget, " = e.currentTarget exemplo");
+        console.log(this, " = this exemplo");
+        if (e.target.nodeName == "BUTTON") {
+          console.log(e.target, "e.target dentro do if");
+        }
+      });
+    </script>
+  </body>
+</html>
