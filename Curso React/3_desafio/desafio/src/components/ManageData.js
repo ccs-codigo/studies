@@ -7,7 +7,7 @@ const ManageData = () => {
 
   console.log(someData);
 
-  const [number, setNumber] = useState(15);
+  const [number, setNumber] = useState(10);
 
   console.log(number);
 

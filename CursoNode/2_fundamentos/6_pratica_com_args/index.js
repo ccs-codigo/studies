@@ -2,7 +2,7 @@
 const minimist = require("minimist");
 
 // modo interno
-const soma = require("./soma").soma;
+const soma = require("./soma.js").soma;
 
 const args = minimist(process.argv.slice(2));
 
