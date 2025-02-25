@@ -29,26 +29,12 @@
             name="text"
             placeholder="New Item"
           />
-          <input id="add-item" type="submit" value="Add" onclick="addNewLi()" />
+          <input id="add-item" type="submit" value="Add" />
         </form>
       </div>
 
       <div class="todo-list__container">
-        <ul id="todo-list">
-          <li class="todo-item">
-            <button class="button-check" onclick="toggleCheckBox()">
-              <i class="fas fa-check displayNone"></i>
-            </button>
-            <p class="task-name">Example</p>
-            <i class="fas fa-edit" onclick="openBox()"></i>
-            <div class="editContainer">
-              <input class="editInput" type="text" />
-              <button class="editButton">Edit</button>
-              <button class="cancelButton">Cancel</button>
-            </div>
-            <i class="fas fa-trash-alt"></i>
-          </li>
-        </ul>
+        <ul id="todo-list"></ul>
       </div>
     </div>
 
