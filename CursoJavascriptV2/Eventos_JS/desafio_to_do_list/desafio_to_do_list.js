@@ -4,6 +4,7 @@
   const todoAddForm = document.getElementById("todo-add");
   const inputItem = document.getElementById("item-input");
   const ul = document.getElementById("todo-list");
+  const lis = ul.getElementsByTagName("li");
 
   let arrTasks = [
     {
@@ -42,6 +43,12 @@
     cancelButton.className = "cancelButton";
     cancelButton.textContent = "Cancel";
 
+    button.setAttribute("data-action", "button");
+    editButton.setAttribute("data-action", "editButton");
+    deleteButton.setAttribute("data-action", "deleteButton");
+    editContainer.setAttribute("data-action", "editContainer");
+    cancelButton.setAttribute("data-action", "cancelButton");
+
     deleteButton.className = "fas fa-trash-alt";
 
     li.appendChild(button);
@@ -74,6 +81,34 @@
     });
   }
 
+  function clickedUL(e) {
+    const dataAction = e.target.getAttribute("data-action");
+    // console.log(e.target);
+    // console.log(lis);
+
+    if (!dataAction) return;
+
+    let currentLi = e.target;
+
+    while (currentLi.nodeName !== "LI") {
+      currentLi = currentLi.parentElement;
+    }
+    console.log(currentLi);
+
+    const currentLiIndex = [...lis].indexOf(currentLi);
+    console.log(currentLiIndex);
+
+    const actions = {
+      deleteButton: function () {
+        console.log("deleteButton no objeto");
+      },
+    };
+
+    if (actions[dataAction]) {
+      actions[dataAction]();
+    }
+  }
+
   todoAddForm.addEventListener("submit", function (e) {
     e.preventDefault();
     addTask(inputItem.value);
@@ -82,5 +117,8 @@
     inputItem.value = "";
     inputItem.focus();
   });
+
+  ul.addEventListener("click", clickedUL);
+
   renderTasks();
 })();
