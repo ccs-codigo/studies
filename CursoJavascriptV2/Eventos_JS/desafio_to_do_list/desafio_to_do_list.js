@@ -12,6 +12,11 @@
       currentData: Date.now(),
       completed: false,
     },
+    {
+      nome: "Task 2",
+      currentData: Date.now(),
+      completed: false,
+    },
   ];
 
   function createLi(obj) {
@@ -20,13 +25,12 @@
     const button = document.createElement("button");
     const iconCheck = document.createElement("i");
     const editButton = document.createElement("i");
+    const deleteButton = document.createElement("i");
 
     const editContainer = document.createElement("div");
     const editInput = document.createElement("input");
     const editButtonConfirm = document.createElement("button");
     const cancelButton = document.createElement("button");
-
-    const deleteButton = document.createElement("i");
 
     li.className = "todo-item";
     p.className = "task-name";
@@ -37,19 +41,19 @@
 
     editContainer.className = "editContainer";
     editInput.className = "editInput";
-    editInput.setAttribute("type", "text");
     editButtonConfirm.className = "editButton";
     editButtonConfirm.textContent = "Edit";
     cancelButton.className = "cancelButton";
     cancelButton.textContent = "Cancel";
+    deleteButton.className = "fas fa-trash-alt";
 
+    editInput.setAttribute("type", "text");
     button.setAttribute("data-action", "button");
     editButton.setAttribute("data-action", "editButton");
     deleteButton.setAttribute("data-action", "deleteButton");
     editContainer.setAttribute("data-action", "editContainer");
     cancelButton.setAttribute("data-action", "cancelButton");
-
-    deleteButton.className = "fas fa-trash-alt";
+    editButtonConfirm.setAttribute("data-action", "editButtonConfirm");
 
     li.appendChild(button);
     button.appendChild(iconCheck);
@@ -83,8 +87,6 @@
 
   function clickedUL(e) {
     const dataAction = e.target.getAttribute("data-action");
-    // console.log(e.target);
-    // console.log(lis);
 
     if (!dataAction) return;
 
@@ -99,8 +101,26 @@
     console.log(currentLiIndex);
 
     const actions = {
+      editButton: function () {
+        const editContainer = currentLi.querySelector(".editContainer");
+
+        [...ul.querySelectorAll(".editContainer")].forEach((container) => {
+          container.removeAttribute("style");
+        });
+
+        editContainer.style.display = "flex";
+      },
       deleteButton: function () {
-        console.log("deleteButton no objeto");
+        arrTasks.splice(currentLiIndex, 1);
+        console.log(arrTasks);
+
+        renderTasks();
+        // currentLi.remove();
+        // currentLi.parentElement.removeChild(currentLi);
+      },
+      cancelButton: function () {
+        const editContainer = currentLi.querySelector(".editContainer");
+        editContainer.style.display = "none";
       },
     };
 
@@ -119,8 +139,5 @@
   });
 
   ul.addEventListener("click", clickedUL);
-
   renderTasks();
 })();
-
-// teste
