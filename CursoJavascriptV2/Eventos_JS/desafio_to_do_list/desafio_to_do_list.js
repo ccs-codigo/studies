@@ -1,70 +1,83 @@
 (function name() {
   "use strict";
 
+  let arrTasks = getSavedData();
+
+  function getSavedData() {
+    let tasksData = localStorage.getItem("tasks");
+    tasksData = JSON.parse(tasksData);
+
+    return tasksData && tasksData.length
+      ? tasksData
+      : [
+          {
+            name: "task 1",
+            createAt: Date.now(),
+            completed: false,
+          },
+        ];
+  }
+
+  function setNewData() {
+    localStorage.setItem("tasks", JSON.stringify(arrTasks));
+  }
+
+  setNewData();
+
+  const itemInput = document.getElementById("item-input");
   const todoAddForm = document.getElementById("todo-add");
-  const inputItem = document.getElementById("item-input");
   const ul = document.getElementById("todo-list");
   const lis = ul.getElementsByTagName("li");
 
-  let arrTasks = [
-    {
-      nome: "Task 1",
-      currentData: Date.now(),
-      completed: false,
-    },
-    {
-      nome: "Task 2",
-      currentData: Date.now(),
-      completed: false,
-    },
-  ];
-
-  function createLi(obj) {
+  function generateLiTask(obj) {
     const li = document.createElement("li");
     const p = document.createElement("p");
-    const button = document.createElement("button");
-    const iconCheck = document.createElement("i");
+    const checkButton = document.createElement("button");
     const editButton = document.createElement("i");
     const deleteButton = document.createElement("i");
 
-    const editContainer = document.createElement("div");
-    const editInput = document.createElement("input");
-    const editButtonConfirm = document.createElement("button");
-    const cancelButton = document.createElement("button");
-
     li.className = "todo-item";
+
+    checkButton.className = "button-check";
+    checkButton.innerHTML = `<i class="fas fa-check ${
+      obj.completed ? "" : "displayNone"
+    } "data-action="checkButton"></i>`;
+    checkButton.setAttribute("data-action", "checkButton");
+
+    li.appendChild(checkButton);
+
     p.className = "task-name";
-    p.textContent = obj.nome;
-    button.className = "button-check";
-    iconCheck.className = "fas fa-check displayNone";
-    editButton.className = "fas fa-edit";
-
-    editContainer.className = "editContainer";
-    editInput.className = "editInput";
-    editButtonConfirm.className = "editButton";
-    editButtonConfirm.textContent = "Edit";
-    cancelButton.className = "cancelButton";
-    cancelButton.textContent = "Cancel";
-    deleteButton.className = "fas fa-trash-alt";
-
-    editInput.setAttribute("type", "text");
-    button.setAttribute("data-action", "button");
-    editButton.setAttribute("data-action", "editButton");
-    deleteButton.setAttribute("data-action", "deleteButton");
-    editContainer.setAttribute("data-action", "editContainer");
-    cancelButton.setAttribute("data-action", "cancelButton");
-    editButtonConfirm.setAttribute("data-action", "editButtonConfirm");
-
-    li.appendChild(button);
-    button.appendChild(iconCheck);
+    p.textContent = obj.name;
     li.appendChild(p);
+
+    editButton.className = "fas fa-edit";
+    editButton.setAttribute("data-action", "editButton");
     li.appendChild(editButton);
-    li.appendChild(editContainer);
 
-    editContainer.appendChild(editInput);
-    editContainer.appendChild(editButtonConfirm);
-    editContainer.appendChild(cancelButton);
+    const containerEdit = document.createElement("div");
+    containerEdit.className = "editContainer";
+    const inputEdit = document.createElement("input");
+    inputEdit.setAttribute("type", "text");
+    inputEdit.className = "editInput";
+    inputEdit.value = obj.name;
 
+    containerEdit.appendChild(inputEdit);
+    const containerEditButton = document.createElement("button");
+    containerEditButton.className = "editButton";
+    containerEditButton.textContent = "Edit";
+    containerEditButton.setAttribute("data-action", "containerEditButton");
+    containerEdit.appendChild(containerEditButton);
+
+    const containerCancelButton = document.createElement("button");
+    containerCancelButton.className = "cancelButton";
+    containerCancelButton.textContent = "Cancel";
+    containerCancelButton.setAttribute("data-action", "containerCancelButton");
+    containerEdit.appendChild(containerCancelButton);
+
+    li.appendChild(containerEdit);
+
+    deleteButton.className = "fas fa-trash-alt";
+    deleteButton.setAttribute("data-action", "deleteButton");
     li.appendChild(deleteButton);
 
     return li;
@@ -73,16 +86,18 @@
   function renderTasks() {
     ul.innerHTML = "";
     arrTasks.forEach((taskObj) => {
-      ul.appendChild(createLi(taskObj));
+      ul.appendChild(generateLiTask(taskObj));
     });
   }
 
   function addTask(task) {
     arrTasks.push({
-      nome: task,
+      name: task,
       currentData: Date.now(),
       completed: false,
     });
+
+    setNewData();
   }
 
   function clickedUL(e) {
@@ -91,14 +106,10 @@
     if (!dataAction) return;
 
     let currentLi = e.target;
-
     while (currentLi.nodeName !== "LI") {
       currentLi = currentLi.parentElement;
     }
-    console.log(currentLi);
-
     const currentLiIndex = [...lis].indexOf(currentLi);
-    console.log(currentLiIndex);
 
     const actions = {
       editButton: function () {
@@ -112,15 +123,31 @@
       },
       deleteButton: function () {
         arrTasks.splice(currentLiIndex, 1);
-        console.log(arrTasks);
-
         renderTasks();
-        // currentLi.remove();
-        // currentLi.parentElement.removeChild(currentLi);
+        setNewData();
       },
-      cancelButton: function () {
-        const editContainer = currentLi.querySelector(".editContainer");
-        editContainer.style.display = "none";
+      containerEditButton: function () {
+        const val = currentLi.querySelector(".editInput").value;
+        arrTasks[currentLiIndex].name = val;
+        renderTasks();
+        setNewData();
+      },
+      containerCancelButton: function () {
+        currentLi.querySelector(".editContainer").removeAttribute("style");
+        currentLi.querySelector(".editInput").value =
+          arrTasks[currentLiIndex].name;
+      },
+      checkButton: function () {
+        arrTasks[currentLiIndex].completed =
+          !arrTasks[currentLiIndex].completed;
+
+        if (arrTasks[currentLiIndex].completed) {
+          currentLi.querySelector(".fa-check").classList.remove("displayNone");
+        } else {
+          currentLi.querySelector(".fa-check").classList.add("displayNone");
+        }
+        setNewData();
+        renderTasks();
       },
     };
 
@@ -131,13 +158,14 @@
 
   todoAddForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    addTask(inputItem.value);
-
+    addTask(itemInput.value);
     renderTasks();
-    inputItem.value = "";
-    inputItem.focus();
+
+    itemInput.value = "";
+    itemInput.focus();
   });
 
   ul.addEventListener("click", clickedUL);
+
   renderTasks();
 })();
